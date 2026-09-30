@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hosam Nasr — Full Stack Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&family=Noto+Kufi+Arabic:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="pre-glitch" data-text="HOSAM NASR">HOSAM NASR</div>
+      <div class="pre-subtitle" id="typeTarget"></div>
+      <div class="pre-bar-wrap">
+        <div class="pre-bar" id="preBar"></div>
+      </div>
+      <div class="pre-percent" id="prePercent">0%</div>
+    </div>
+    <div class="scan-line"></div>
+  </div>
+
+  <!-- HEADER -->
+  <header id="header">
+    <nav class="nav container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>HOS<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active" data-en="Home" data-ar="الرئيسية">Home</a></li>
+        <li><a href="#about" class="nav-link" data-en="About" data-ar="عني">About</a></li>
+        <li><a href="#skills" class="nav-link" data-en="Skills" data-ar="المهارات">Skills</a></li>
+        <li><a href="#projects" class="nav-link" data-en="Projects" data-ar="المشاريع">Projects</a></li>
+        <li><a href="#testimonials" class="nav-link" data-en="Reviews" data-ar="الآراء">Reviews</a></li>
+        <li><a href="#contact" class="nav-link" data-en="Contact" data-ar="تواصل">Contact</a></li>
+      </ul>
+      <div class="nav-controls">
+        <button class="ctrl-btn" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+        <button class="ctrl-btn lang-btn" id="langToggle" aria-label="Toggle language">
+          <span id="langLabel">AR</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+
+
+
+
+  <main>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="hero-bg">
+        <canvas id="matrixCanvas"></canvas>
+        <div class="hero-grid"></div>
+      </div>
+      <div class="container hero-content">
+        <div class="hero-text" data-aos="fade-right">
+          <p class="hero-greeting">
+            <span class="terminal-prompt">~/hosam $</span>
+            <span class="blink-cursor"> _</span>
+          </p>
+          <h1 class="hero-name">Hosam<br><span class="accent-text">Nasr</span></h1>
+          <div class="hero-title-wrap">
+            <span class="title-static" data-en="&gt; " data-ar="&gt; ">&gt; </span>
+            <span class="hero-typed" id="heroTyped"></span><span class="hero-cursor">|</span>
+          </div>
+          <p class="hero-tagline" data-en="Building modern and scalable web applications" data-ar="بناء تطبيقات ويب حديثة وقابلة للتوسع">Building modern and scalable web applications</p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fas fa-code"></i>
+              <span data-en="View My Work" data-ar="أعمالي">View My Work</span>
+            </a>
+            <a href="#" class="btn btn-outline" id="cvDownload">
+              <i class="fas fa-download"></i>
+              <span data-en="Download CV" data-ar="تحميل السيرة الذاتية">Download CV</span>
+            </a>
+          </div>
+        </div>
+        <div class="hero-image-wrap" data-aos="fade-left">
+          <div class="hero-img-frame">
+            <div class="hex-border">
+              <div class="hex-inner">
+                <img src="images/hos.jpg" alt="Hosam Nasr" class="hero-img" loading="lazy" /> 
+                <!-- https://api.dicebear.com/9.x/avataaars/svg?seed=HosamNasr&backgroundColor=0a0a1a&clothesColor=00d4ff&hairColor=2c1b18&facialHairType=beardMedium&accessoriesType=prescription02 -->
+              </div>
+            </div>
+            <div class="img-orbit orbit-1"></div>
+            <div class="img-orbit orbit-2"></div>
+
+            <!-- Tech icons — orbit-1 ring (4 icons, 90° apart) -->
+            <div class="tech-icon ti-ring-1 ti-pos-0"  style="--ic:#e34c26"><i class="fab fa-html5"></i></div>
+            <div class="tech-icon ti-ring-1 ti-pos-1"  style="--ic:#264de4"><i class="fab fa-css3-alt"></i></div>
+            <div class="tech-icon ti-ring-1 ti-pos-2"  style="--ic:#f7df1e"><i class="fab fa-js-square"></i></div>
+            <div class="tech-icon ti-ring-1 ti-pos-3"  style="--ic:#3776ab"><i class="fab fa-python"></i></div>
+
+            <!-- Tech icons — orbit-2 ring (3 icons, 120° apart) -->
+            <div class="tech-icon ti-ring-2 ti-pos-0"  style="--ic:#21759b"><i class="fab fa-wordpress"></i></div>
+            <div class="tech-icon ti-ring-2 ti-pos-1"  style="--ic:#f05032"><i class="fab fa-git-alt"></i></div>
+            <div class="tech-icon ti-ring-2 ti-pos-2"  style="--ic:#00ff88"><i class="fas fa-database"></i></div>
+
+            <div class="corner-tag tl">&lt;dev&gt;</div>
+            <div class="corner-tag br">&lt;/dev&gt;</div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-hint">
+        <span data-en="Scroll Down" data-ar="انتقل للأسفل">Scroll Down</span>
+        <i class="fas fa-chevron-down bounce"></i>
+      </div>
+    </section>
+
+
+
+
+
+
+    <!-- ABOUT -->
+    <section id="about" class="about section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">&lt;section id="about"&gt;</span>
+          <h2 class="section-title" data-en="About Me" data-ar="عني">About Me</h2>
+          <div class="title-line"></div>
+        </div>
+        <div class="about-grid">
+          <div class="about-card" data-aos="fade-right">
+            <div class="terminal-window">
+              <div class="terminal-bar">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="terminal-title">about.json</span>
+              </div>
+              <div class="terminal-body">
+                <pre class="code-block"><code>{
+  <span class="key">"name"</span>: <span class="str">"Hosam Nasr"</span>,
+  <span class="key">"role"</span>: <span class="str">"Full Stack Developer"</span>,
+  <span class="key">"location"</span>: <span class="str">"Egypt"</span>,
+  <span class="key">"experience"</span>: <span class="str">"3+ years"</span>,
+  <span class="key">"passion"</span>: <span class="str">"Clean Code & Innovation"</span>,
+  <span class="key">"status"</span>: <span class="available">"Available for work"</span>
+}</code></pre>
+              </div>
+            </div>
+          </div>
+          <div class="about-text" data-aos="fade-left">
+            <h3 class="about-subtitle" data-en="Hello, My-Portfoilo! 👋" data-ar="مرحباً بك في البورتفويلو الخاص بي! 👋">Hello, My-Portfoilo! 👋</h3>
+            <p class="about-para" data-en="I'm Hosam Nasr, a passionate Full Stack Developer with a deep love for crafting elegant, efficient, and scalable web solutions. My journey in programming began with curiosity and grew into a professional craft built on discipline and creativity." data-ar="أنا حسام نصر، مطور ويب متكامل شغوف ببناء حلول ويب أنيقة وفعّالة وقابلة للتوسع. بدأت رحلتي في البرمجة بالفضول ونمت لتصبح حرفة مهنية مبنية على الانضباط والإبداع.">
+              I'm Hosam Nasr, a passionate Full Stack Developer with a deep love for crafting elegant, efficient, and scalable web solutions. My journey in programming began with curiosity and grew into a professional craft built on discipline and creativity.
+            </p>
+            <p class="about-para" data-en="I specialize in building end-to-end web applications using modern technologies. I believe that great software is not just functional — it's also maintainable, readable, and a pleasure to work with." data-ar="أتخصص في بناء تطبيقات ويب متكاملة باستخدام التقنيات الحديثة. أؤمن بأن البرمجيات الجيدة ليست فقط وظيفية — بل أيضاً قابلة للصيانة والقراءة ومريحة للعمل بها.">
+              I specialize in building end-to-end web applications using modern technologies. I believe that great software is not just functional — it's also maintainable, readable, and a pleasure to work with.
+            </p>
+            <div class="about-stats">
+              <div class="stat-item">
+                <span class="stat-num" data-target="30">0</span><span class="stat-plus">+</span>
+                <span class="stat-label" data-en="Projects" data-ar="مشروع">Projects</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num" data-target="3">0</span><span class="stat-plus">+</span>
+                <span class="stat-label" data-en="Years Exp." data-ar="سنوات خبرة">Years Exp.</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num" data-target="15">0</span><span class="stat-plus">+</span>
+                <span class="stat-label" data-en="Clients" data-ar="عميل">Clients</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-close" data-aos="fade-up">
+          <span class="section-tag">&lt;/section&gt;</span>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <!-- SKILLS -->
+    <section id="skills" class="skills section">
+      <div class="container">
+
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">&lt;section id="skills"&gt;</span>
+          <h2 class="section-title" data-en="My Skills" data-ar="مهاراتي">My Skills</h2>
+          <div class="title-line"></div>
+        </div>
+
+
+        <div class="skills-grid">
+          <div class="skill-card" data-aos="fade-up" data-delay="0">
+            <div class="skill-icon-wrap" style="--clr:#e34c26">
+              <i class="fab fa-html5"></i>
+            </div>
+            <h4 class="skill-name">HTML5</h4>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar" data-pct="90"><div class="skill-fill" style="--clr:#e34c26"></div></div>
+              <span class="skill-pct">90%</span>
+            </div>
+          </div>
+
+
+          <div class="skill-card" data-aos="fade-up" data-delay="100">
+            <div class="skill-icon-wrap" style="--clr:#264de4">
+              <i class="fab fa-css3-alt"></i>
+            </div>
+            <h4 class="skill-name">CSS3</h4>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar" data-pct="80"><div class="skill-fill" style="--clr:#264de4"></div></div>
+              <span class="skill-pct">80%</span>
+            </div>
+          </div>
+
+
+          <div class="skill-card" data-aos="fade-up" data-delay="200">
+            <div class="skill-icon-wrap" style="--clr:#f7df1e">
+              <i class="fab fa-js-square"></i>
+            </div>
+            <h4 class="skill-name">JavaScript</h4>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar" data-pct="50"><div class="skill-fill" style="--clr:#f7df1e"></div></div>
+              <span class="skill-pct">50%</span>
+            </div>
+          </div>
+
+
+          <div class="skill-card" data-aos="fade-up" data-delay="300">
+            <div class="skill-icon-wrap" style="--clr:#3776ab">
+              <i class="fab fa-python"></i>
+            </div>
+            <h4 class="skill-name">Python</h4>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar" data-pct="75"><div class="skill-fill" style="--clr:#3776ab"></div></div>
+              <span class="skill-pct">75%</span>
+            </div>
+          </div>
+
+
+          <div class="skill-card" data-aos="fade-up" data-delay="400">
+            <div class="skill-icon-wrap" style="--clr:#21759b">
+              <i class="fab fa-wordpress"></i>
+            </div>
+            <h4 class="skill-name">WordPress</h4>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar" data-pct="85"><div class="skill-fill" style="--clr:#21759b"></div></div>
+              <span class="skill-pct">85%</span>
+            </div>
+          </div>
+
+
+          <div class="skill-card" data-aos="fade-up" data-delay="500">
+            <div class="skill-icon-wrap" style="--clr:#f0f6fc">
+              <i class="fab fa-github"></i>
+            </div>
+            <h4 class="skill-name">GitHub</h4>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar" data-pct="82"><div class="skill-fill" style="--clr:#f0f6fc"></div></div>
+              <span class="skill-pct">82%</span>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="section-close" data-aos="fade-up">
+          <span class="section-tag">&lt;/section&gt;</span>
+        </div>
+
+      </div>
+    </section>
+
+
+
+
+
+    <!-- PROJECTS -->
+    <section id="projects" class="projects section">
+      <div class="container">
+
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">&lt;section id="projects"&gt;</span>
+          <h2 class="section-title" data-en="My Projects" data-ar="مشاريعي">My Projects</h2>
+          <div class="title-line"></div>
+        </div>
+
+        
+
+
+
+
+
+        <!-- Elsaied -->
+        <div class="projects-grid">
+          <div class="project-card" data-aos="fade-up" data-delay="0">
+            <div class="project-img-wrap">
+              <img src="images/Portfolio-Elsaied.jpg" alt="E-Commerce Platform" loading="lazy" />
+              <!-- https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&q=80 -->
+              <div class="project-overlay">
+                <a href="https://hn-programming.github.io/Elsaied22/" class="overlay-btn" target="_blank"><i class="fas fa-external-link-alt"></i> <span data-en="Live Demo" data-ar="معاينة">Live Demo</span></a>
+                <a href="https://hn-programming.github.io/Elsaied22/" class="overlay-btn" target="_blank"><i class="fab fa-github"></i> <span data-en="GitHub" data-ar="جيت هاب">GitHub</span></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span>
+              </div>
+              <h3 class="project-title" data-en="Portfoilo-Elsaied" data-ar="بورتفويلو السعيد">Portfoilo-Elsaied</h3>
+              <p class="project-desc" data-en=" Personal website Video Editor." data-ar="موقع شخصي لمحرر فيديو."> Personal website Video Editor.</p>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+          <!-- Ahmed -->
+          <div class="project-card" data-aos="fade-up" data-delay="100">
+            <div class="project-img-wrap">
+              <img src="images/Portfolio-Ahmed.jpg" alt="Task Manager App" loading="lazy" />
+              <!-- https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&q=80 -->
+              <div class="project-overlay">
+                <a href="https://hn-programming.github.io/Ahmed22/" class="overlay-btn" target="_blank"><i class="fas fa-external-link-alt"></i> <span data-en="Live Demo" data-ar="معاينة">Live Demo</span></a>
+                <a href="https://hn-programming.github.io/Ahmed22/" class="overlay-btn" target="_blank"><i class="fab fa-github"></i> <span data-en="GitHub" data-ar="جيت هاب">GitHub</span></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span>
+              </div>
+              <h3 class="project-title" data-en="Portfoilo-Ahmed" data-ar="بورتفويلو أحمد">Portfoilo-Ahmed</h3>
+              <p class="project-desc" data-en="Personal website digital marketer." data-ar="موقع شخصي لمسوق رقمي."> Personal website digital marketer .</p>
+            </div>
+          </div>
+
+
+
+
+          
+
+
+
+          <!-- Mr.Ahmed Hassan -->
+          <div class="project-card" data-aos="fade-up" data-delay="500">
+            <div class="project-img-wrap">
+              <img src="images/Mr ahmed.png" alt="AI Chat Interface" loading="lazy" />
+              <!-- https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&q=80 -->
+              <div class="project-overlay">
+                <a href="https://hn-programming.github.io/Mr.Ahmed-22/" class="overlay-btn" target="_blank"><i class="fas fa-external-link-alt"></i> <span data-en="Live Demo" data-ar="معاينة">Live Demo</span></a>
+                <a href="https://hn-programming.github.io/Mr.Ahmed-22/" class="overlay-btn" target="_blank"><i class="fab fa-github"></i> <span data-en="GitHub" data-ar="جيت هاب">GitHub</span></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tag">Html</span><span class="tag">Css</span><span class="tag">Js</span>
+              </div>
+              <h3 class="project-title" data-en="Mr.Ahmed Hassan" data-ar="م.أحمد حسن">Mr.Ahmed Hassan</h3>
+              <p class="project-desc" data-en="An educational platform for a mathematics teacher." data-ar="منصة تعليمية لمدرس رياضيات.">An educational platform for a mathematics teacher.</p>
+            </div>
+          </div> 
+
+
+
+
+
+
+
+
+
+
+          <!-- naqaa -->
+          <div class="project-card" data-aos="fade-up" data-delay="300">
+            <div class="project-img-wrap">
+              <img src="images/Naqaa-Logo.jpg" alt="Portfolio CMS" loading="lazy" />
+              <!--https://images.unsplash.com/photo-1607706189992-eae578626c86?w=600&q=80-->
+              <div class="project-overlay">
+                <a href="https://hn-programming.github.io/Naqaa-22/" class="overlay-btn" target="_blank"><i class="fas fa-external-link-alt"></i> <span data-en="Live Demo" data-ar="معاينة">Live Demo</span></a>
+                <a href="https://hn-programming.github.io/Naqaa-22/" class="overlay-btn" target="_blank"><i class="fab fa-github"></i> <span data-en="GitHub" data-ar="جيت هاب">GitHub</span></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span>
+              </div>
+              <h3 class="project-title" data-en="Naqaa Company" data-ar="شركة نقاء">Naqaa Company</h3>
+              <p class="project-desc" data-en="It is a company for cleaning homes and companies in Saudi Arabia." data-ar="هي شركة لتنظيف المنازل و الشركات بالسعودية.">It is a company for cleaning homes and companies in Saudi Arabia.</p>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+          <!-- Mr.Emad -->
+          <div class="project-card" data-aos="fade-up" data-delay="200">
+            <div class="project-img-wrap">
+              <img src="images/Emad.jpg" alt="Analytics Dashboard" loading="lazy" />
+              <!--https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80-->
+              <div class="project-overlay">
+                <a href="https://hn-programming.github.io/Mr.Emad-22/" class="overlay-btn" target="_blank"><i class="fas fa-external-link-alt"></i> <span data-en="Live Demo" data-ar="معاينة">Live Demo</span></a>
+                <a href="https://hn-programming.github.io/Mr.Emad-22/" class="overlay-btn" target="_blank"><i class="fab fa-github"></i> <span data-en="GitHub" data-ar="جيت هاب">GitHub</span></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tag">Html</span><span class="tag">CSS</span><span class="tag">Js</span>
+              </div>
+              <h3 class="project-title" data-en="Mr.Emad Youssef (El-Boss)" data-ar="مستر عماد يوسف (El-Boss)">Mr.Emad Youssef (El-Boss)</h3>
+              <p class="project-desc" data-en="An educational platform for the English language." data-ar="منصة تعليمية للغة الانجليزية.">An educational platform for the English language.</p>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+          <!-- dr.Ahmed El-garhy -->
+          <div class="project-card" data-aos="fade-up" data-delay="400">
+            <div class="project-img-wrap">
+              <img src="images/dr.Ahmed.jpg" alt="Code Snippet Tool" loading="lazy" />
+              <!--https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=600&q=80-->
+              <div class="project-overlay">
+                <a href="#" class="overlay-btn dental-coming-soon-btn"><i class="fas fa-external-link-alt"></i> <span data-en="Live Demo" data-ar="معاينة">Live Demo</span></a>
+                <a href="#" class="overlay-btn dental-coming-soon-btn"><i class="fab fa-github"></i> <span data-en="GitHub" data-ar="جيت هاب">GitHub</span></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tag">Html</span><span class="tag">Css</span><span class="tag">Js</span>
+              </div>
+              <h3 class="project-title" data-en="Dr. Ahmed El-garhy" data-ar="د. أحمد الجارحي">Dr. Ahmed El-garhy</h3>
+              <p class="project-desc" data-en="Dental clinic website." data-ar="موقع لعيادة أسنان.">Dental clinic website.</p>
+            </div>
+          </div>
+
+          
+          
+
+
+        </div>
+        <div class="section-close" data-aos="fade-up">
+          <span class="section-tag">&lt;/section&gt;</span>
+        </div>
+      </div>
+      
+    </section>
+
+
+
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="testimonials section">
+      <div class="container">
+
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">&lt;section id="testimonials"&gt;</span>
+          <h2 class="section-title" data-en="Client Testimonials" data-ar="آراء العملاء">Client Testimonials</h2>
+          <div class="title-line"></div>
+        </div>
+
+        <div class="testimonials-grid">
+
+
+
+
+
+
+
+          <!-- ELSAIED -->
+          <div class="testimonial-card" data-aos="fade-up" data-delay="300">
+            <i class="fas fa-quote-left testimonial-quote-icon"></i>
+            <div class="testimonial-rating" aria-label="5 out of 5 stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text" data-en="Our website looks great and runs smoothly thanks to Hossam's development skills." data-ar="موقنا الإلكتروني يبدو رائعاً ويعمل بسلاسة بفضل مهارات حسام في التطوير.">Our website looks great and runs smoothly thanks to Hossam's development skills.</p>
+            <div class="testimonial-author">
+              <img src="https://api.dicebear.com/9.x/avataaars/svg?seed=OmarKhaled&backgroundColor=0a0a1a" alt="Elsaied Ousama" class="testimonial-avatar" loading="lazy" />
+              <div class="testimonial-author-info">
+                <h4 class="testimonial-name">Elsaied Ousama</h4>
+                <span class="testimonial-role" data-en="Video Editor" data-ar="محرر فيديو">Video Editor</span>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+          <!-- Ahmed Salem -->
+          <div class="testimonial-card" data-aos="fade-up" data-delay="500">
+            <i class="fas fa-quote-left testimonial-quote-icon"></i>
+            <div class="testimonial-rating" aria-label="4 out of 5 stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+            </div>
+            <p class="testimonial-text" data-en="Great communicator and problem solver. Highly recommend him for any web development project." data-ar="متواصل ممتاز وحلّال للمشكلات. أنصح به بشدة لأي مشروع تطوير ويب.">Great communicator and problem solver. Highly recommend him for any web development project.</p>
+            <div class="testimonial-author">
+              <img src="https://api.dicebear.com/9.x/avataaars/svg?seed=AhmedSamir&backgroundColor=0a0a1a" alt="Ahmed Salem" class="testimonial-avatar" loading="lazy" />
+              <div class="testimonial-author-info">
+                <h4 class="testimonial-name">Ahmed Salem</h4>
+                <span class="testimonial-role" data-en="Digital Marketer" data-ar="مسوّق رقمي">Digital Marketer</span>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <!-- Emad Youssef -->
+          <div class="testimonial-card" data-aos="fade-up" data-delay="100">
+            <i class="fas fa-quote-left testimonial-quote-icon"></i>
+            <div class="testimonial-rating" aria-label="5 out of 5 stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text" data-en="Working with Hosam was a great experience. He turned our idea into a clean, fast, and responsive website." data-ar="كانت تجربة العمل مع حسام رائعة. حوّل فكرتنا إلى موقع نظيف وسريع ومتجاوب.">Working with Hosam was a great experience. He turned our idea into a clean, fast, and responsive website.</p>
+            <div class="testimonial-author">
+              <img src="https://api.dicebear.com/9.x/avataaars/svg?seed=MohamedYoussef&backgroundColor=0a0a1a" alt="Emad Youssef" class="testimonial-avatar" loading="lazy" />
+              <div class="testimonial-author-info">
+                <h4 class="testimonial-name">Emad Youssef</h4>
+                <span class="testimonial-role" data-en="Startup Founder" data-ar="مؤسس شركة ناشئة">Startup Founder</span>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <!-- Laila Hassan -->
+          <div class="testimonial-card" data-aos="fade-up" data-delay="200">
+            <i class="fas fa-quote-left testimonial-quote-icon"></i>
+            <div class="testimonial-rating" aria-label="4 out of 5 stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+            </div>
+            <p class="testimonial-text" data-en="Professional, reliable, and skilled. The dashboard he built helped us track our KPIs effortlessly." data-ar="محترف وموثوق وماهر. ساعدتنا لوحة التحكم التي بناها على متابعة مؤشرات الأداء بسهولة.">Professional, reliable, and skilled. The dashboard he built helped us track our KPIs effortlessly.</p>
+            <div class="testimonial-author">
+              <img src="https://api.dicebear.com/9.x/avataaars/svg?seed=LailaHassan&backgroundColor=0a0a1a" alt="Laila Hassan" class="testimonial-avatar" loading="lazy" />
+              <div class="testimonial-author-info">
+                <h4 class="testimonial-name">Laila Hassan</h4>
+                <span class="testimonial-role" data-en="Marketing Director" data-ar="مديرة تسويق">Marketing Director</span>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <!-- Sarah Ahmed -->
+          <div class="testimonial-card" data-aos="fade-up" data-delay="0">
+            <i class="fas fa-quote-left testimonial-quote-icon"></i>
+            <div class="testimonial-rating" aria-label="5 out of 5 stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text" data-en="Hosam delivered a polished web app ahead of schedule. His attention to detail and communication were outstanding." data-ar="قام حسام بتسليم تطبيق ويب احترافي قبل الموعد المحدد. كان اهتمامه بالتفاصيل وتواصله رائعين.">Hosam delivered a polished web app ahead of schedule. His attention to detail and communication were outstanding.</p>
+            <div class="testimonial-author">
+              <img src="https://api.dicebear.com/9.x/avataaars/svg?seed=SarahAhmed&backgroundColor=0a0a1a" alt="Sarah Ahmed" class="testimonial-avatar" loading="lazy" />
+              <div class="testimonial-author-info">
+                <h4 class="testimonial-name">Sarah Ahmed</h4>
+                <span class="testimonial-role" data-en="Product Manager" data-ar="مديرة منتج">Product Manager</span>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <!-- Nourhan Adel -->
+          <div class="testimonial-card" data-aos="fade-up" data-delay="400">
+            <i class="fas fa-quote-left testimonial-quote-icon"></i>
+            <div class="testimonial-rating" aria-label="5 out of 5 stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text" data-en="Hosam translated my designs into pixel-perfect code without losing any of the details." data-ar="حوّل حسام تصاميمي إلى كود دقيق دون فقدان أي من التفاصيل.">Hosam translated my designs into pixel-perfect code without losing any of the details.</p>
+            <div class="testimonial-author">
+              <img src="https://api.dicebear.com/9.x/avataaars/svg?seed=NourhanAdel&backgroundColor=0a0a1a" alt="Nourhan Adel" class="testimonial-avatar" loading="lazy" />
+              <div class="testimonial-author-info">
+                <h4 class="testimonial-name">Nourhan Adel</h4>
+                <span class="testimonial-role" data-en="UX Designer" data-ar="مصممة تجربة مستخدم">UX Designer</span>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="section-close" data-aos="fade-up">
+          <span class="section-tag">&lt;/section&gt;</span>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">&lt;section id="contact"&gt;</span>
+          <h2 class="section-title" data-en="Get In Touch" data-ar="تواصل معي">Get In Touch</h2>
+          <div class="title-line"></div>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info" data-aos="fade-right">
+            <h3 class="contact-heading" data-en="Let's Build Something Together" data-ar="لنبني شيئاً معاً">Let's Build Something Together</h3>
+            <p class="contact-sub" data-en="Have a project in mind? Looking for a developer who can bring your ideas to life? Drop me a message — I'm always open to new challenges." data-ar="هل لديك مشروع في ذهنك؟ هل تبحث عن مطور يمكنه إحياء أفكارك؟ أرسل لي رسالة — أنا دائماً منفتح على تحديات جديدة.">Have a project in mind? Looking for a developer who can bring your ideas to life? Drop me a message — I'm always open to new challenges.</p>
+            <div class="contact-details">
+              <div class="detail-item">
+                <div class="detail-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div>
+                  <span class="detail-label" data-en="Location" data-ar="الموقع">Location</span>
+                  <span class="detail-value" data-en="Egypt, Cairo" data-ar="مصر، القاهرة">Egypt, Cairo</span>
+                </div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-icon"><i class="fas fa-phone-alt"></i></div>
+                <div>
+                  <span class="detail-label" data-en="Phone" data-ar="الهاتف">Phone</span>
+                  <span class="detail-value">+20 106 791 0806</span>
+                </div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-icon"><i class="fas fa-envelope"></i></div>
+                <div>
+                  <span class="detail-label" data-en="Email" data-ar="البريد الإلكتروني">Email</span>
+                  <span class="detail-value">hosamnasr@gmail.com</span>
+                </div>
+              </div>
+            </div>
+            <div class="social-links">
+              <a href="https://github.com/hn-programming" class="social-btn" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="#" class="social-btn" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://www.facebook.com/share/1DtFaZYyRF/" class="social-btn" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/ho7am_nasr?igsh=MW1udzR0NHVkZWprNQ==" class="social-btn social-btn--instagram" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+          <div class="contact-form-wrap" data-aos="fade-left">
+            <div class="form-terminal">
+              <div class="terminal-bar">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="terminal-title">send_message.sh</span>
+              </div>
+              <form class="contact-form" id="contactForm" novalidate>
+                <input type="hidden" name="access_key" value="a1a73953-bfc1-4881-8edc-015f034bba3c" />
+                <input type="hidden" name="subject" value="New Contact Message — Hosam Nasr Portfolio" />
+                <input type="hidden" name="from_name" value="Hosam Nasr Portfolio" />
+                <div class="form-group">
+                  <label class="form-label" data-en="// Your Name" data-ar="// اسمك">// Your Name</label>
+                  <input type="text" class="form-input" id="formName" placeholder="Hosam Nasr" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" data-en="// Your Email" data-ar="// بريدك الإلكتروني">// Your Email</label>
+                  <input type="email" class="form-input" id="formEmail" placeholder="you@example.com" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" data-en="// Message" data-ar="// رسالتك">// Message</label>
+                  <textarea class="form-input form-textarea" id="formMessage" placeholder="Hello Hosam, I'd like to..." rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-full">
+                  <i class="fas fa-paper-plane"></i>
+                  <span data-en="Send Message" data-ar="إرسال الرسالة">Send Message</span>
+                </button>
+                <div class="form-feedback" id="formFeedback"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="section-close" data-aos="fade-up">
+          <span class="section-tag">&lt;/section&gt;</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-text">
+        <span class="footer-bracket">&lt;</span>
+        <span data-en="Crafted with" data-ar="صُنع بـ">Crafted with</span>
+        <i class="fas fa-heart footer-heart"></i>
+        <span data-en="by" data-ar="بواسطة">by</span>
+        <strong> Hosam Nasr</strong>
+        <span class="footer-bracket">/&gt;</span>
+      </p>
+      <p class="footer-copy" data-en="© 2025 All Rights Reserved" data-ar="© 2025 جميع الحقوق محفوظة">© 2025 All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- COMING SOON MODAL (Dental Clinic project cards only) -->
+  <div class="cs-modal-overlay" id="comingSoonOverlay" aria-hidden="true">
+    <div class="cs-modal" role="dialog" aria-modal="true" aria-labelledby="comingSoonText">
+      <button class="cs-modal-close" id="comingSoonClose" aria-label="Close">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="cs-modal-icon"><i class="fas fa-tooth"></i></div>
+      <p class="cs-modal-text" id="comingSoonText" data-en="Coming Soon" data-ar="سيتوفر قريبًا">Coming Soon</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
